@@ -30,11 +30,8 @@
 // Author: vadimb@google.com (Vadim Berman)
 //
 // Low-level types and utilities for porting Google Mock to various
-// platforms.  All macros ending with _ and symbols defined in an
-// internal namespace are subject to change without notice.  Code
-// outside Google Mock MUST NOT USE THEM DIRECTLY.  Macros that don't
-// end with _ are part of Google Mock's public API and can be used by
-// code outside Google Mock.
+// platforms.  They are subject to change without notice.  DO NOT USE
+// THEM IN USER CODE.
 
 #ifndef GMOCK_INCLUDE_GMOCK_INTERNAL_GMOCK_PORT_H_
 #define GMOCK_INCLUDE_GMOCK_INTERNAL_GMOCK_PORT_H_
@@ -43,13 +40,8 @@
 #include <stdlib.h>
 #include <iostream>
 
-// Most of the utilities needed for porting Google Mock are also
-// required for Google Test and are defined in gtest-port.h.
-//
-// Note to maintainers: to reduce code duplication, prefer adding
-// portability utilities to Google Test's gtest-port.h instead of
-// here, as Google Mock depends on Google Test.  Only add a utility
-// here if it's truly specific to Google Mock.
+// Most of the types needed for porting Google Mock are also required
+// for Google Test and are defined in gtest-port.h.
 #include "gtest/internal/gtest-linked_ptr.h"
 #include "gtest/internal/gtest-port.h"
 
